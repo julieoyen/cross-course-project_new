@@ -1,0 +1,940 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #0a3641;
+    font-family: "Montserrat";
+  }
+  
+  .header-logo {
+    max-width: 100px;
+    max-height: 50px;
+    margin-left: 20px;
+  }
+  
+  nav {
+    background-color: white;
+  }
+  
+  nav a {
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  nav li {
+    display: block;
+  }
+  
+  nav,
+  #hamburger-menu {
+    display: none;
+  }
+  
+  #hamburger-menu:checked ~ nav {
+    display: block;
+  }
+  
+  .nav-content {
+    display: block;
+    padding: 20px;
+    background: white;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+  }
+  
+  .cart-label,
+  .hamburger-label {
+    float: right;
+    color: white;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .cart-label,
+  .hamburger-label:hover {
+   cursor: pointer;
+  }
+  
+  .breadcrumbs{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .breadcrumbs a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 5px;
+  }
+  
+  @media (min-width: 720px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    nav {
+      display: flex;
+      align-items: center;
+      background: #0a3641;
+    }
+  
+    nav li:hover{
+      background-color: light gray;
+      opacity: 0.8;
+      border-radius: 30px;
+    }
+  
+    nav a {
+      color: white;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  
+    .nav-content {
+      display: flex;
+      flex-direction: row;
+      background: none;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .hamburger-label,
+    .cart-label {
+      display: none;
+    }
+  
+  
+  }
+  
+  body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  }
+  
+  
+  .red-button {
+    width: 165px;
+    height: 35px;
+    font-size: 14px;
+    background-color: rgba(180, 58, 36, 1);
+    color: white;
+    border-style: hidden;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Montserrat", Arial, Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .red-button:hover {
+    background-color: rgba(10, 54, 65, 1);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .grey-button {
+    width: 100px;
+    height: 35px;
+    flex-shrink: 0;
+    background-color: rgba(230, 235, 239, 1);
+    color: rgba(149, 138, 138, 1);
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0px,
+  }
+  
+  .grey-button:hover {
+    background-color: rgba(180, 58, 36, 1);
+    color: white;
+    cursor: pointer;
+  }
+  
+  
+  @media (min-width: 720px) {
+    .banner_logo {
+      height: 175px;
+    }
+  
+    .banner_button {
+      margin-top: 40px;
+      font-size: 20px;
+    }
+  
+    .go-shopping {
+      padding: 15px 60px;
+    }
+  }
+  
+  /* Header info
+  --------------------------------------------------------------*/
+  
+  h1,
+  h2 {
+    font-family: "Montserrat", Arial, Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+  }
+  
+  h1 {
+    font-family: "Montserrat", Arial, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: none;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #000;
+    text-align: center;
+    font-family: "Montserrat", Arial, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  
+  h3 {
+    color: #000;
+    text-align: center;
+    font-family: "Montserrat", Arial, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  
+  h4 {
+    text-align: center;
+    font-family:"Montserrat", Arial, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  /* Home page/Index 
+  -----------------------------------------------------------*/
+  .banner_section {
+    background-image: url("/images/mountainsrightsize.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45vw;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .banner_logo {
+    height: 75px;
+  }
+  
+  .banner_button {
+    margin-top: 10px;
+  }
+  
+  .banner_content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+  }
+  
+  .go-shopping {
+    background-color: rgba(180, 58, 36, 0.69);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 7px 20px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .index-products {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .index-products .grey-button{
+    margin-top: 20px;
+  }
+  
+  .product-image {
+    height: 120px;
+    margin-top: 20px;
+  }
+  
+  .view-product {
+    color: #000;
+    font-family: "Montserrat", Arial, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 30px;
+    border-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(180, 58, 36, 1);
+    color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .view-more{
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  /* Newsletter section
+  -----------------------------------------------------------*/
+  
+  .newsletter_container {
+    display: flex;
+    text-align: center;
+    margin-top: 40px;
+    justify-content: space-between;
+    background: #0a3641;
+  }
+  
+  .newsletter_text {
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .newsletter_text h2 {
+    font-size: 14px;
+    font-weight: bolder;
+  }
+  .newsletter_text,
+  .newsletter_text h2 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .newsletter_container img {
+    max-width: 375px;
+  }
+  
+  .we-aspire{
+    text-align: center;
+    padding: 100px;
+  }
+  
+  .we-aspire h2{
+    padding-bottom: 15px;
+    font-size: 15px;
+    font-weight: 800;
+  }
+  
+  .we-aspire p {
+    font-weight: 400;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  @media (min-width: 720px) {
+    .index-products {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .product-image {
+      height: 240px;
+    }
+  
+    .newsletter_text p {
+      font-size: 18px;
+      margin-top: 18px;
+      padding: 10px;
+    }
+  
+    .newsletter_text h2 {
+      font-size: 20px;
+    }
+  
+    .we-aspire {
+      padding: 150px;
+    }
+  
+    .we-aspire h2 {
+      font-size: 30px;
+    }
+  
+    .we-aspire p {
+      font-size: 20px;
+    }
+  }
+  
+  
+  /* Products
+  ------------------------------------------------------------*/
+  .product-page{
+    background-color: white;
+    margin: 0%;
+    
+  }
+  .banner_products{
+  background-image: url("/images/Header\ Pic.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25vw;
+    position: relative;
+    text-align: center;
+  }
+  
+  .top-left-text{
+    position: absolute;
+    color: white;
+    top: 40px;
+    left: 50px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .products{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+  
+  .product-box {
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    flex-grow: 1;
+    flex-basis: 16%;
+  }
+  .product-image{
+    width: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-info{
+    margin-top: auto;
+    text-align: center;
+  
+  }
+  
+  .hiking-people{
+    position: relative;
+    text-align: center;
+  }
+  
+  .slogan-1{
+    position:absolute;
+    bottom: 30px;
+    right: 16px;
+    color: white;
+  }
+  .slogan-2{
+    position: absolute;
+    bottom: 10px;
+    right: 16px;
+    color: white;
+  }
+  @media (min-width:720px) {
+    .slogan-1,
+    .slogan-2 {
+      font-size: 39px;
+    }
+  
+    .slogan-1 {
+      padding-bottom: 20px;
+    }
+  
+    .top-left-text {
+      font-size: 35px;
+    }
+  
+  
+  
+  }
+  
+  /* Balkai Rain Jacket 
+  ------------------------------------------------------------*/
+  
+  .balkai-info-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .balkai-info-page h1{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-weight: 900;
+  }
+  .balkai-color-size {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    
+  }
+  
+  .balkai-picture {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 442px;;
+  }
+  
+  .balkai-size{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .button-size{
+    width: 50px;
+    font-weight: 900;
+    font-size: 15px;
+    background-color: rgba(180, 58, 36, 1);
+    text-align: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    border-style: double; 
+  }
+  
+  
+  .price{
+    font-size: xx-large;
+    font-weight: bold; 
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  .free-shipping{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  .description{
+  padding-bottom: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  
+  }
+  
+  .description h2{
+    padding-top: 50px;
+    padding-bottom: 5px;
+  }
+  
+  .activity{
+    padding-top: 20px;
+  }
+  
+  
+  /* Contact 
+  ------------------------------------------------------------*/
+  
+  
+  
+  /* About
+  ------------------------------------------------------------*/
+  .about-us {
+    background-color: rgba(230, 235, 239, 1);
+    border-radius: 30px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .about-us-text{
+    text-align: center;
+    padding: 50px;
+    
+  }
+  .about-logo{
+    width: 15%;
+    height: auto;
+    padding-top: 15px;
+    
+  }
+  
+  .julie{
+    max-width: 80%;
+    height: auto;
+    float: right;
+  }
+  
+  .about-us{
+  display: flex;
+  flex-direction: column;
+  }
+  
+  @media (min-width: 720px){
+  .about-us{
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+    text-align: justify;
+  }
+  
+  .about-us-text{
+    font-size: 25px;
+    font-weight: bolder;
+  }
+  
+  .about-logo{
+    padding-bottom: 20px;
+  }
+  .julie{
+    width: 646px;
+    text-align: right;
+    border-radius: 50px;
+  }
+  
+  }
+  
+  
+  
+  /* Cart
+  -------------------------------------------------------------*/
+  .your-cart{
+    padding: 15px;
+    border-bottom: 1px solid;
+    font-weight: bolder;
+  }
+  .balkai-cart-info{
+    padding: 10px;
+  }
+  
+  .absolute-total{
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  background-color: rgba(230, 235, 239, 1);
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  }
+  
+  .total-box-1{
+  float: left;
+  width: 50%;
+  background-color: rgba(230, 235, 239, 1);
+  font-weight: bolder;
+  padding-left: 10px;
+  }
+  
+  .total-box-2{
+  float: right;
+  text-align: end;
+  width: 50%;
+  background-color: rgba(230, 235, 239, 1);
+  font-weight:lighter;
+  padding-right: 10px;
+  }
+  
+  .subtotal{
+    background-color: rgba(230, 235, 239, 1);
+  } 
+  
+  .subtotal-3 {
+    border-top: 1px solid ;
+  }
+  
+  .password{
+    margin-bottom: 5px;
+  }
+  
+  .forgot-password{
+   cursor: pointer;
+   font-size: 12px;
+  }
+  .member {
+    padding: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid;
+  }
+  .member input{
+    display: flex;
+    margin: 5px;
+  
+  }
+  .create-account-button {
+    width: 140px;
+    height: 35px;
+    flex-shrink: 0;
+    background-color: rgba(230, 235, 239, 1);
+    color: rgba(149, 138, 138, 1);
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0px,
+  }
+  
+  .create-account-button:hover {
+    background-color: rgba(180, 58, 36, 1);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    border: none;
+    background-color: white;
+  
+  }
+  
+  .forgot-password:hover {
+    font-style: italic;
+    color: red; 
+    
+  }
+  
+  .sign-in,
+  .member,
+  .delivery-address,
+  .delivery-options {
+    padding: 40px 10px;
+    padding-bottom: 30px;
+  }
+  
+  .delivery-address{
+    padding: 40px 10px;
+    border-bottom: 1px solid;
+  }
+  
+  .delivery-options{
+    border-bottom: 1px solid;
+    padding-bottom: 40px;
+  }
+  
+  .delivery-options h2{
+    padding-top: 40px;
+  }
+  
+   .express-delivery{
+    display: flex;
+    flex-direction: column;
+   }
+  
+  .express-checkout{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .express-checkout img{
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  .sign-in h2,
+  .member h2,
+  .delivery-address h2,
+  .delivery-options h2,
+  .express-options h2 {
+    padding-bottom: 5px;
+    text-align: left;
+  }
+  .place-order {
+    text-align: center;
+  }
+  
+  .balkai-cart {
+    text-align: left;
+    max-width: 180px;
+  }
+  
+  @media (max-width:720px){
+    .breadcrumbs{
+      font-size: small;
+    }
+    .cart{
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+  
+  @media (min-width: 721px){
+    .cart{
+      box-sizing: border-box;
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+    .your-cart,
+    .balkai-cart-info,
+    .sign-in,
+    .member,
+    .delivery-address,
+    .delivery-options{
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  
+    .balkai-cart-info h2,
+    .absolute-total h2,
+    .sign-in h2,
+    .member h2,
+    .delivery-address h2,
+    .delivery-options h2{
+      font-size: 30px;
+    }
+    .balkai-cart-info p,
+    .absolute-total p,
+    .sign-in p,
+    .member p,
+    .delivery-address p,
+    .delivery-options p{
+      font-size: 18px;  
+    }
+  
+  .total-box-1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+  }
+  
+  .total-box-2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+  }
+    .forgot-password{
+      font-size: 18px;
+    }
+  
+    .e-mail{
+      font-size: 18px;
+    }
+    .password{
+      font-size: 18px;
+    }
+    .absolute-total{
+      font-size: 20px;
+    }
+  }
+  
+  /* Checkout 
+  ------------------------------------------------------------*/
+  
+  .continue-shopping {
+    align-items: center;
+    color: #000;
+    border-style: hidden;
+    background-color: white;
+  }
+  
+  
+  .button-size {
+    border: 1px solid;
+    background-color: white;
+    width: 22x;
+    height: 22px;
+    border-color: #000;
+  
+  }
+  
+  .button-size:hover {
+    background-color: rgba(180, 58, 36, 1);
+    color: white;
+    border-style: solid;
+    border-color: #000;
+    cursor: pointer;
+  }
+  
+  .button-size:focus {
+    background-color: rgba(180, 58, 36, 1);
+    color: white;
+    border-style: solid;
+    border-color: #000;
+  }
+  
+  .product-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .product-list {
+    text-align: center;
+  }
+  
+  .absolute.total {
+    background-color: rgba(230, 235, 239, 1);
+    border-color: #000;
+  }
+  
+  
+  .balkai-cart-info {
+    text-align: left;
+  }
+  
+  .balkai-info-page {
+    text-align: left;
+  }
+  
+  .description {
+    background-color: rgba(230, 235, 239, 1);
+  }
+  
+  .bullet-list {
+    text-align: start;
+  }
+  
+  
+  .checkout {
+    text-align: center;
+    background-color: rgba(230, 235, 239, 1)
+  }
+  
+  .rainydayslogo-blue {
+    width: 143px;
+    height: 75px;
+  }
+  
+  
+  
+  /* Footer
+  -------------------------------------------------------*/
+  
+  .footer-logo {
+    width: 66px;
+    height: 36px;
+    padding-top: 15px;
+  }
+  
+  footer {
+    background-color: rgba(245, 245, 245, 1);
+    text-align: center;
+  }
+  
+  .icons {
+    text-align-last: right;
+    padding-right: 25px;
+  }
+  
+  .some:hover {
+    cursor: pointer;
+  }
+  
